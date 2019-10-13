@@ -1,4 +1,4 @@
-import { Component, SimpleChanges } from '@angular/core';
+import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CurrentWeather } from '@weather/api-interfaces';
 import { Observable, of } from 'rxjs';
@@ -29,14 +29,5 @@ export class AppComponent {
 
   getWeather(city: string): Observable<CurrentWeather> {
     return this.http.get<CurrentWeather>('/api/weather/'+city);
-  }
-
-  ngOnChanges(changes: SimpleChanges) {
-    // for (let propName in changes) {
-    //   let chng = changes[propName];
-    //   if(propName==='city') {
-    //     this.setWeather(chng);
-    //   }
-    // }
   }
 }
