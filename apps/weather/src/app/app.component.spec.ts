@@ -16,5 +16,14 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
+    expect(app.city).toBe('Sydney');
+    expect(app.cities).toEqual(['Sydney','Melbourne','Wollongong']);
+  });
+  it('should setWeather', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app.weather).toEqual(undefined);
+    let weatherSpy = spyOn(app, 'setWeather').and.callThrough();
+    expect(weatherSpy).not.toBe(null);
   });
 });
