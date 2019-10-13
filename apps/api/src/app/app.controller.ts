@@ -1,15 +1,15 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Param } from '@nestjs/common';
 
-import { Message } from '@weather/api-interfaces';
+import { CurrentWeather } from '@weather/api-interfaces';
 
 import { AppService } from './app.service';
 
-@Controller()
+@Controller('weather')
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get('hello')
-  getData(): Message {
-    return this.appService.getData();
+  @Get(':city')
+  getData(@Param() params): CurrentWeather {
+    return this.appService.getData(params.city);
   }
 }

@@ -1,8 +1,32 @@
-<div style="text-align:center">
-  <h1>Welcome to weather!</h1>
-  <img
-    width="450"
-    src="https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png"
-  />
+<div> <label for="city">Select a city: </label>
+    <select [(ngModel)]="city" name="city" (change)="setWeather($event.target.value)">
+        <option *ngFor="let item of cities" [value]="item" >
+          {{item}}
+        </option>
+      </select>
+    </div>
+<div style="text-align:center" *ngIf="weather">
+    <table border="1">
+        <tr>
+            <td>City</td>
+            <td>{{weather.city}}</td>
+        </tr>
+        <tr>
+            <td>Updated Time</td>
+            <td>{{weather.upd_time}}</td>
+        </tr>
+        <tr>
+          <td>Weather</td>
+          <td>{{weather.weather}}</td>
+        </tr>
+        <tr>
+          <td>Temperature</td>
+          <td>{{weather.temperature}}</td>
+        </tr>
+        <tr>
+            <td>Wind</td>
+            <td>{{weather.wind}}</td>
+          </tr>
+      </table>
 </div>
-<div>Message: {{ hello$ | async | json }}</div>
+
