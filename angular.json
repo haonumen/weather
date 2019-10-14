@@ -15,7 +15,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/apps/weather",
+            "outputPath": "public/dist",
             "index": "apps/weather/src/index.html",
             "main": "apps/weather/src/main.ts",
             "polyfills": "apps/weather/src/polyfills.ts",
@@ -135,7 +135,7 @@
         "build": {
           "builder": "@nrwl/node:build",
           "options": {
-            "outputPath": "dist/apps/api",
+            "outputPath": "public/server",
             "main": "apps/api/src/main.ts",
             "tsConfig": "apps/api/tsconfig.app.json",
             "assets": ["apps/api/src/assets"]
