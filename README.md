@@ -1,9 +1,34 @@
 # Weather
 
-This project was generated using [Nx](https://nx.dev).
+This Full-Stack Applications was a monorepos and was built on [Nx](https://nx.dev).  we are using Angular and Nest framework to build it.
 
-<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png" width="450"></p>
+It is a "monorepo" way to building applications.
 
+Working with multiple applications and libraries is difficult. From Google to Facebook, Uber, Twitter and more, a good amount of large software companies handle this challenge by taking a monorepo approach. And they have been doing so for years. These are some of the advantages this approach provides:
+
+- Everything at that current commit works together. Changes can be verified across all affected parts of the organization.
+- Easy to split code into composable modules
+- Easier dependency management
+- One toolchain setup
+- Code editors and IDEs are "workspace" aware
+- Consistent developer experience
+# How to build this application
+After clone the code to your local, and then you can run below commands under the project directory:
+```
+npm install
+#Install packages that project needs
+npm run build
+#Build the project
+npm start
+#start the application and then you can see it in the browser like below
+```
+<p align="center"><img src="docs\app.png" width="400"></p>
+
+# Design
+
+Details about Design will be [here](./docs/design.md)
+
+# Reference
 🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
 
 ## Quick Start & Documentation
