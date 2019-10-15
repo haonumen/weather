@@ -64,8 +64,7 @@ Because this is a monorepos, so we want to resue the back-end node server, so wh
       rootPath: join(__dirname, '..', 'dist'),
     }),
 ```
-
-#Front-end
+# Front-end
 
 Here I am not going to introduce to much about the front-end part, because it's just built on the Angular framework, just a HTTP GET request. and a form.
 
