@@ -1,3 +1,3 @@
 #!/bin/bash
-echo `pwd && ls`
+cd weather
 npm run start
