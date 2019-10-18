@@ -7,7 +7,7 @@
     "nx": "nx",
     "serve": "concurrently \"ng serve api\" \"ng serve\"",
     "start": "node ./public/server/main.js",
-    "stop": "pkill -SIGINT weatherApp",
+    "stop": "pkill --signal SIGINT weatherApp",
     "build": "concurrently \"ng build api\" \"ng build weather\"",
     "build:api": "ng build api",
     "build:weather": "ng build weather",
