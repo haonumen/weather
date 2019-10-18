@@ -1,3 +1,3 @@
 #!/bin/bash
 cd weather
-npm start &
+npm start </dev/null &>/dev/null &
