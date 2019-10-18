@@ -1,2 +1,3 @@
 #!/bin/bash
-echo "test! stop the server"
+cd weather
+npm stop </dev/null &>/dev/null &
