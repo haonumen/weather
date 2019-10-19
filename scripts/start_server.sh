@@ -1,3 +1,4 @@
 #!/bin/bash
 cd weather
-npm start </dev/null &>/dev/null &
+export port=80
+nohup npm start </dev/null &>/dev/null &
